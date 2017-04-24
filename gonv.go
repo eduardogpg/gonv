@@ -9,7 +9,7 @@ func init(){
 func GetEnvOrCreate(env, defVal string) string{
   if val := os.Getenv(env); val == ""{
     os.Setenv(env, defVal)
-    return val
+    return defVal
   }else{
     return val
   }
