@@ -26,15 +26,17 @@ import(
   "github.com/eduardogpg/gonv"
 )
 
-func main() {
-      
-    host := gonv.GetStringEnv("HOST", "localhost")
-    port := gonv.GetIntEnv("PORT", 8000)
-    debug := gonv.GetBoolEnv("DEBUG", false)
+func init(){
 
-    fmt.Println(host)
-    fmt.Println(port)
-    fmt.Println(debug)
+}
+
+func main(){
+  host := gonv.GetStringEnv("HOST", "localhost")
+  port := gonv.GetIntEnv("PORT", 3306)
+  debug := gonv.GetBoolEnv("DEBUG", false)
+
+  final := fmt.Sprintf("%s:%d debug mode : %t", host, port, debug)
+  fmt.Println(final)
 }
 
 ```
@@ -47,3 +49,4 @@ License
 
 MIT
 
+  
